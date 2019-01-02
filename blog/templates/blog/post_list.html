@@ -1,16 +1,19 @@
 <html>
-	<title>Starviz Blog</title>
 	<head>
+		<title>Starviz Blog</title>
+	</head>
+	<body>
 		<div>
 			<h1><a href="/">Staviz Blog</a></h1>
 		</div>
-	<div>
-		{% for post in posts%}
 		<div>
-			<p>author: {{ post.author }} published: {{ post.published_date }}</p>
-			<h2><a href="">{{ post.title }}</a></h2>
-			<p>{{ post.text|linebreaksbr }}</p>
-		</div>
+		{% for post in posts%}
+			<div>
+				<p>author: {{ post.author }} published: {{ post.published_date }}</p>
+				<h2><a href="">{{ post.title }}</a></h2>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
 		{% endfor %}
-	</div>
+		</div>
+	</body>
 </html>
